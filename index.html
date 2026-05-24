@@ -6,13 +6,13 @@
     <title>文档</title>
     <style>
         * { margin: 0; padding: 0; }
-        html, body { height: 100%; overflow: hidden; }
-        /* 占满整个屏幕，没有多余边框或工具栏 */
-        .fullscreen-pdf { width: 100%; height: 100%; border: none; display: block; }
+        html, body { height: 100%; overflow: hidden; background: #525659; }
+        /* 让 pdf 查看器占满整个屏幕 */
+        #pdf-viewer { width: 100%; height: 100%; border: none; display: block; }
     </style>
 </head>
 <body>
-    <!-- 方案B（备选）：使用更通用、兼容性更好的在线服务 -->
-    <iframe class="fullscreen-pdf" src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://raw.githubusercontent.com/amberx678/amberx678.github.io/main/dzqz.rlsbt.zj.pdf"></iframe>
+    <!-- 嵌入 pdf.js 的查看器，并使用国内可用的 CDN 地址 -->
+    <iframe id="pdf-viewer" src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/web/viewer.html?file=https://raw.githubusercontent.com/amberx678/amberx678.github.io/main/dzqz.rlsbt.zj.pdf"></iframe>
 </body>
 </html>
